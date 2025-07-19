@@ -163,10 +163,10 @@ pnpm --filter api dev
 
 ### **Fase 1: Foundation (Em Andamento)**
 - [x] Setup do monorepo com Turbo
-- [ ] Configuração do frontend React
-- [ ] Componentes UI com Radix
-- [ ] Configuração de linting com Biome
-- [ ] Setup do backend Fastify
+- [x] Configuração do frontend React
+- [x] Componentes UI com Radix
+- [x] Configuração de linting com Biome
+- [x] Setup do backend Fastify
 - [ ] Configuração do banco PostgreSQL
 
 ### **Fase 2: Core Features (Próximo)**

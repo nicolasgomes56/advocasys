@@ -1,0 +1,35 @@
+# Dependências
+node_modules/
+pnpm-lock.yaml
+
+# Build
+dist/
+build/
+
+# Testes
+coverage/
+.nyc_output/
+
+# Logs
+*.log
+logs/
+
+# Ambiente
+.env
+.env.local
+.env.*.local
+
+# Prisma
+prisma/migrations/
+
+# IDE
+.vscode/
+.idea/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Temporários
+*.tmp
+*.temp 
