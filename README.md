@@ -3,31 +3,31 @@
 </div> -->
 
 <div id="badges" align="center">
+  
+  <!-- Status e Tecnologias Essenciais -->
   <a href="https://github.com/seu-usuario/advocasys">
-    <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-blue?style=for-the-badge&logo=github" alt="Status"/>
-  </a>
-  <a href="https://nodejs.org/">
-    <img src="https://img.shields.io/badge/Node.js-green?style=for-the-badge&logo=node.js" alt="Node.js"/>
+    <img src="https://home.aveek.io/GitHub-Profile-Badges/badge/status/em%20desenvolvimento/blue?logo=github" alt="Status: Em Desenvolvimento"/>
   </a>
   <a href="https://react.dev/">
-    <img src="https://img.shields.io/badge/React-blue?style=for-the-badge&logo=react" alt="React"/>
+    <img src="https://home.aveek.io/GitHub-Profile-Badges/badge/react/18+/blue?logo=react" alt="React 18+"/>
   </a>
   <a href="https://www.typescriptlang.org/">
-    <img src="https://img.shields.io/badge/TypeScript-blue?style=for-the-badge&logo=typescript" alt="TypeScript"/>
+    <img src="https://home.aveek.io/GitHub-Profile-Badges/badge/typescript/5+/blue?logo=typescript" alt="TypeScript 5+"/>
   </a>
-  <a href="https://turbo.build/">
-    <img src="https://img.shields.io/badge/Turbo-purple?style=for-the-badge&logo=turbo" alt="Turbo"/>
+  <a href="https://nodejs.org/">
+    <img src="https://home.aveek.io/GitHub-Profile-Badges/badge/node.js/18+/green?logo=node.js" alt="Node.js 18+"/>
   </a>
-  <a href="https://pnpm.io/">
-    <img src="https://img.shields.io/badge/pnpm-orange?style=for-the-badge&logo=pnpm" alt="pnpm"/>
+  <a href="https://www.postgresql.org/">
+    <img src="https://home.aveek.io/GitHub-Profile-Badges/badge/postgresql/15+/blue?logo=postgresql" alt="PostgreSQL 15+"/>
   </a>
+  
 </div>
 
 ---
 
 # 🚀 Advocasys - Plataforma de Gestão Jurídica
 
-### [🔗 Demo em Desenvolvimento](#) | [📖 Documentação Técnica](project-structure.md)
+### [🔗 Demo em Desenvolvimento](#) | [📖 Documentação Técnica Completa](project-structure.md)
 
 > **💡 Para desenvolvedores**: Consulte a [documentação técnica completa](project-structure.md) para detalhes sobre arquitetura, stack tecnológica, configuração e desenvolvimento.
 
@@ -36,6 +36,12 @@
 **Advocasys** é uma solução moderna e completa para gestão de escritórios de advocacia, desenvolvida com tecnologias de ponta. O projeto utiliza princípios de **Domain-Driven Design (DDD)** e **Test-Driven Development (TDD)** para oferecer uma experiência excepcional tanto para advogados quanto para clientes.
 
 **Inicialmente desenvolvido como solução on-premise**, o Advocasys foi arquitetado com flexibilidade para evoluir para um modelo SaaS, permitindo que escritórios de advocacia escolham entre hospedar localmente ou utilizar a versão em nuvem.
+
+### **🏗️ Arquitetura**
+O projeto segue uma arquitetura **client/server** com:
+- **Frontend**: React + Vite + TypeScript + Tailwind CSS + ShadcnUI
+- **Backend**: Node.js + Fastify + Prisma + PostgreSQL
+- **Padrões**: Clean Architecture + DDD + TDD
 
 ### 🎯 Problema que Resolvemos
 
@@ -110,9 +116,10 @@ Transformamos o Advocasys em uma plataforma moderna que:
 ## 🚀 Quick Start
 
 ### **Pré-requisitos**
-- Node.js
+- Node.js 18+
 - pnpm
 - Git
+- PostgreSQL
 
 ### **1. Clone o Repositório**
 ```bash
@@ -120,53 +127,48 @@ git clone https://github.com/seu-usuario/advocasys.git
 cd advocasys
 ```
 
-### **2. Instale as Dependências**
+### **2. Configure o Banco de Dados**
 ```bash
-# Instale o pnpm globalmente (se necessário)
-npm install -g pnpm
+# Instale o PostgreSQL (se necessário)
+# Configure as variáveis de ambiente do servidor
+cp server/.env.example server/.env
+# Edite server/.env com suas configurações de banco
+```
 
-# Instale as dependências do monorepo
+### **3. Configure o Servidor**
+```bash
+cd server
 pnpm install
-```
-
-### **3. Configure o Ambiente**
-```bash
-# Copie os arquivos de exemplo
-cp apps/web/.env.example apps/web/.env
-cp apps/api/.env.example apps/api/.env
-
-# Edite as variáveis de ambiente
-nano apps/web/.env
-nano apps/api/.env
-```
-
-### **4. Inicie o Desenvolvimento**
-```bash
-# Inicia todos os serviços em modo desenvolvimento
+npx prisma generate
+npx prisma migrate dev
 pnpm dev
+```
 
-# Ou inicie apenas o frontend
-pnpm --filter web dev
-
-# Ou inicie apenas o backend
-pnpm --filter api dev
+### **4. Configure o Cliente**
+```bash
+# Em outro terminal
+cd client
+pnpm install
+cp .env.example .env
+# Edite client/.env com a URL da API
+pnpm dev
 ```
 
 ### **5. Acesse a Aplicação**
 - **Frontend**: http://localhost:3000
 - **Backend API**: http://localhost:3001
-- **Storybook**: http://localhost:6006 (quando configurado)
+- **Swagger Docs**: http://localhost:3001/docs
 
 ---
 
 ## 📋 Roadmap
 
 ### **Fase 1: Foundation (Em Andamento)**
-- [x] Setup do monorepo com Turbo
-- [x] Configuração do frontend React
-- [x] Componentes UI com Radix
-- [x] Configuração de linting com Biome
-- [x] Setup do backend Fastify
+- [x] Setup da estrutura client/server
+- [ ] Configuração do frontend React
+- [ ] Componentes UI com Radix
+- [ ] Configuração de linting com Biome
+- [ ] Setup do backend Fastify
 - [ ] Configuração do banco PostgreSQL
 
 ### **Fase 2: Core Features (Próximo)**
