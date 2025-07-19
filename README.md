@@ -162,7 +162,7 @@ pnpm --filter api dev
 ## 📋 Roadmap
 
 ### **Fase 1: Foundation (Em Andamento)**
-- [ ] Setup do monorepo com Turbo
+- [x] Setup do monorepo com Turbo
 - [ ] Configuração do frontend React
 - [ ] Componentes UI com Radix
 - [ ] Configuração de linting com Biome
