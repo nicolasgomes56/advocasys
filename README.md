@@ -1,6 +1,6 @@
-<div id="header" align="center">
+<!-- <div id="header" align="center">
   <img src="https://i.imgur.com/8JZqX3L.png" width="800" height="400" alt="Advocasys Banner">
-</div>
+</div> -->
 
 <div id="badges" align="center">
   <a href="https://github.com/seu-usuario/advocasys">
@@ -27,11 +27,13 @@
 
 # 🚀 Advocasys - Plataforma de Gestão Jurídica
 
-### [🔗 Demo em Desenvolvimento](#) | [📖 Documentação](#) | [🐛 Reportar Bug](#)
+### [🔗 Demo em Desenvolvimento](#) | [📖 Documentação Técnica](project-structure.md)
+
+> **💡 Para desenvolvedores**: Consulte a [documentação técnica completa](project-structure.md) para detalhes sobre arquitetura, stack tecnológica, configuração e desenvolvimento.
 
 ## 📋 Descrição
 
-**Advocasys** é uma solução moderna e completa para gestão de escritórios de advocacia, desenvolvida com tecnologias de ponta em uma arquitetura monorepo. O projeto utiliza princípios de **Domain-Driven Design (DDD)** e **Test-Driven Development (TDD)** para oferecer uma experiência excepcional tanto para advogados quanto para clientes.
+**Advocasys** é uma solução moderna e completa para gestão de escritórios de advocacia, desenvolvida com tecnologias de ponta. O projeto utiliza princípios de **Domain-Driven Design (DDD)** e **Test-Driven Development (TDD)** para oferecer uma experiência excepcional tanto para advogados quanto para clientes.
 
 **Inicialmente desenvolvido como solução on-premise**, o Advocasys foi arquitetado com flexibilidade para evoluir para um modelo SaaS, permitindo que escritórios de advocacia escolham entre hospedar localmente ou utilizar a versão em nuvem.
 
@@ -105,145 +107,6 @@ Transformamos o Advocasys em uma plataforma moderna que:
 
 ---
 
-## 🛠️ Stack Tecnológica
-
-### **Monorepo & Build Tools**
-| Tecnologia | Propósito |
-|------------|-----------|
-| **Turbo** | Build system e cache |
-| **pnpm** | Package manager |
-| **TypeScript** | Tipagem estática |
-| **Biome** | Linting e formatação |
-
-### **Frontend**
-| Tecnologia | Propósito |
-|------------|-----------|
-| **React** | Framework UI |
-| **Vite** | Build tool |
-| **Tailwind CSS** | Estilização |
-| **ShadcnUI** | Componentes UI reutilizáveis |
-| **Radix UI** | Componentes acessíveis |
-| **Recharts** | Gráficos |
-| **Lucide React** | Ícones |
-| **date-fns** | Manipulação de datas |
-| **TanStack Query** | Gerenciamento de estado do servidor |
-| **TanStack Table** | Tabelas avançadas e interativas |
-| **TanStack Router** | Roteamento type-safe |
-| **TanStack Virtual** | Virtualização para listas grandes |
-
-### **Backend**
-| Tecnologia | Propósito |
-|------------|-----------|
-| **Node.js** | Runtime JavaScript |
-| **Fastify** | Framework web |
-| **Prisma** | ORM type-safe |
-| **PostgreSQL** | Banco de dados |
-| **Zod** | Validação de dados |
-| **Vitest** | Framework de testes |
-| **@fastify/cors** | Configuração CORS |
-| **@fastify/jwt** | Autenticação JWT |
-| **@fastify/rate-limit** | Rate limiting |
-| **@fastify/multipart** | Upload de arquivos |
-| **@fastify/static** | Servir arquivos estáticos |
-| **@fastify/swagger** | Documentação da API |
-| **@fastify/swagger-ui** | Interface Swagger |
-| **@prisma/client** | Cliente Prisma |
-| **bcryptjs** | Hash de senhas |
-| **jsonwebtoken** | Tokens JWT |
-| **multer** | Middleware de upload |
-| **helmet** | Segurança HTTP |
-| **compression** | Compressão de resposta |
-| **pino** | Logger estruturado |
-| **pino-pretty** | Formatação de logs para desenvolvimento |
-
-### **Arquitetura & Padrões**
-| Tecnologia | Propósito |
-|------------|-----------|
-| **DDD** | Domain-Driven Design |
-| **TDD** | Test-Driven Development |
-| **SOLID** | Princípios de arquitetura |
-| **Clean Architecture** | Separação de responsabilidades |
-
-### **DevOps & Qualidade**
-| Tecnologia | Propósito |
-|------------|-----------|
-| **Docker** | Containerização |
-| **GitHub Actions** | CI/CD |
-| **Storybook** | Documentação de componentes |
-| **Cypress** | Testes E2E |
-| **Husky** | Git hooks |
-
----
-
-## 🏗️ Arquitetura
-
-### **Estrutura Monorepo**
-```
-/advocasys
-├── apps/
-│   ├── web/              # Frontend React
-│   │   ├── src/
-│   │   │   ├── components/
-│   │   │   ├── pages/
-│   │   │   ├── hooks/
-│   │   │   ├── utils/
-│   │   │   └── styles/
-│   │   ├── public/
-│   │   ├── package.json
-│   │   ├── tsconfig.json
-│   │   ├── tailwind.config.js
-│   │   └── vite.config.ts
-│   └── api/              # Backend Fastify (em desenvolvimento)
-│       ├── src/
-│       │   ├── modules/  # Domínios (users, contracts, finance)
-│       │   ├── core/     # Camada de domínio
-│       │   ├── infra/    # Infraestrutura
-│       │   └── shared/   # Utilitários
-│       ├── prisma/
-│       │   ├── schema.prisma
-│       │   └── migrations/
-│       ├── package.json
-│       └── tsconfig.json
-├── packages/
-│   ├── ui/               # Componentes compartilhados
-│   │   ├── src/
-│   │   ├── package.json
-│   │   └── tsconfig.json
-│   └── config/           # Configurações compartilhadas
-│       ├── biome.json
-│       └── tsconfig.base.json
-├── .github/              # Workflows CI/CD
-│   └── workflows/
-│       └── ci.yml
-├── turbo.json            # Configuração Turbo
-├── package.json          # Dependências do monorepo
-├── tsconfig.json         # Base TypeScript
-└── README.md
-```
-
-### **Princípios Arquiteturais**
-
-#### **Domain-Driven Design (DDD)**
-- **Separação de Domínios**: Cada domínio tem sua própria estrutura
-- **Entidades e Value Objects**: Modelagem rica do domínio
-- **Aggregates**: Agregações com invariantes
-- **Repositories**: Abstração de acesso a dados
-- **Services**: Lógica de domínio complexa
-
-#### **Clean Architecture**
-- **Independência de Frameworks**: Core independente de tecnologias
-- **Testabilidade**: Fácil de testar em isolamento
-- **Independência de UI**: Lógica separada da interface
-- **Independência de Banco**: Core não depende de ORM
-
-#### **Test-Driven Development (TDD)**
-- **Testes Unitários**: Cobertura completa
-- **Testes de Integração**: Validação de fluxos
-- **Testes E2E**: Validação de cenários completos
-- **Red-Green-Refactor**: Ciclo de desenvolvimento
-
----
-
 ## 🚀 Quick Start
 
 ### **Pré-requisitos**
@@ -293,202 +156,6 @@ pnpm --filter api dev
 - **Frontend**: http://localhost:3000
 - **Backend API**: http://localhost:3001
 - **Storybook**: http://localhost:6006 (quando configurado)
-
----
-
-## 📊 Banco de Dados
-
-### **Modelagem Planejada**
-- **Users**: Usuários do sistema
-- **Clients**: Clientes (pessoa física/jurídica)
-- **Processes**: Processos jurídicos
-- **Contracts**: Contratos
-- **Payments**: Pagamentos
-- **Documents**: Documentos
-- **Tasks**: Tarefas e compromissos
-- **AuditLogs**: Logs de auditoria
-
-### **Características**
-- **UUID**: Identificadores únicos
-- **Soft Deletes**: Exclusão lógica
-- **Auditoria**: Logs de todas as alterações
-- **Relacionamentos**: Chaves estrangeiras otimizadas
-- **Índices**: Performance otimizada
-- **Logs Estruturados**: Pino para rastreamento completo
-
----
-
-## 🔒 Segurança
-
-### **Autenticação & Autorização**
-- **JWT**: Tokens seguros com refresh
-- **RBAC**: Controle de acesso baseado em roles
-- **2FA**: Autenticação de dois fatores
-- **Rate Limiting**: Proteção contra ataques
-- **CORS**: Configuração segura
-
-### **Proteção de Dados**
-- **Criptografia**: Dados em repouso e trânsito
-- **Validação**: Zod para validação de entrada
-- **Sanitização**: Limpeza de dados
-- **LGPD**: Conformidade com a lei brasileira
-- **Backup**: Backup automático
-- **Logs Seguros**: Pino para auditoria e monitoramento
-
----
-
-## 📱 Interface do Usuário
-
-### **Design System**
-- **ShadcnUI**: Componentes UI reutilizáveis e customizáveis
-- **Radix UI**: Componentes acessíveis e customizáveis
-- **Tailwind CSS**: Estilização utilitária
-- **Lucide Icons**: Ícones consistentes
-- **Class Variance Authority**: Variantes de componentes
-- **Dark Mode**: Suporte a tema escuro (planejado)
-
-### **Componentes Implementados**
-- **Alert Dialog**: Diálogos de confirmação
-- **Avatar**: Componente de avatar
-- **Checkbox**: Checkboxes customizados
-- **Dialog**: Modais e diálogos
-- **Dropdown Menu**: Menus suspensos
-- **Hover Card**: Cards com hover
-- **Label**: Labels de formulário
-- **Popover**: Popovers informativos
-- **Radio Group**: Grupos de radio
-- **Scroll Area**: Áreas com scroll
-- **Select**: Seletores customizados
-- **Separator**: Separadores visuais
-- **Switch**: Switches toggle
-- **Tooltip**: Tooltips informativos
-
-### **Responsividade**
-- **Mobile-first**: Design mobile-first
-- **PWA**: Progressive Web App (planejado)
-- **Touch-friendly**: Interface touch
-- **Acessibilidade**: WCAG 2.1 compliance
-
----
-
-## 🧪 Testes
-
-### **Frontend**
-```bash
-# Testes unitários (quando implementados)
-pnpm --filter web test
-
-# Testes com UI
-pnpm --filter web test:ui
-
-# Testes E2E (quando implementados)
-pnpm --filter web test:e2e
-```
-
-### **Backend**
-```bash
-# Testes unitários
-pnpm --filter api test
-
-# Testes com coverage
-pnpm --filter api test:coverage
-
-# Testes em modo watch
-pnpm --filter api test:watch
-```
-
-### **Qualidade de Código**
-```bash
-# Linting
-pnpm lint
-
-# Formatação
-pnpm format
-
-# Verificação de tipos
-pnpm check-types
-```
-
----
-
-## 📈 Performance
-
-### **Frontend**
-- **Vite**: Build ultra-rápido
-- **Turbo**: Cache inteligente
-- **Code Splitting**: Divisão de código
-- **Lazy Loading**: Carregamento sob demanda
-- **Image Optimization**: Otimização de imagens
-
-### **Backend**
-- **Fastify**: Framework ultra-rápido
-- **Redis**: Cache de alta performance
-- **Connection Pooling**: Pool de conexões
-- **Query Optimization**: Queries otimizadas
-- **Compression**: Compressão de resposta
-- **Pino**: Logging estruturado e performático
-
----
-
-## 🔄 CI/CD
-
-### **GitHub Actions**
-```yaml
-# Workflow principal
-- Lint e formatação com Biome
-- Verificação de tipos TypeScript
-- Testes automatizados
-- Build de produção
-- Deploy automático
-- Notificações
-```
-
-### **Deploy**
-
-#### **Fase 1: On-Premise (Atual)**
-- **Frontend**: Servidor local ou VPS
-- **Backend**: Servidor local ou VPS
-- **Database**: PostgreSQL local ou gerenciado
-- **Monitoring**: Logs locais e ferramentas de monitoramento
-
-#### **Fase 2: SaaS (Futuro)**
-- **Frontend**: Vercel/Netlify
-- **Backend**: Railway/Render
-- **Database**: PostgreSQL gerenciado (AWS RDS, Supabase)
-- **Monitoring**: Sentry, DataDog
-- **Multi-tenancy**: Arquitetura para múltiplos clientes
-
----
-
-## 📚 Documentação
-
-### **APIs**
-- **Swagger/OpenAPI**: Documentação interativa
-- **Postman Collection**: Coleção de endpoints
-- **TypeScript**: Tipos para frontend
-
-### **Guias**
-- [Guia de Contribuição](CONTRIBUTING.md)
-- [Guia de Deploy](DEPLOY.md)
-- [Guia de API](API.md)
-- [Changelog](CHANGELOG.md)
-
----
-
-## 🤝 Contribuição
-
-### **Como Contribuir**
-1. **Fork** o projeto
-2. **Crie** uma branch (`git checkout -b feature/AmazingFeature`)
-3. **Commit** suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. **Push** para a branch (`git push origin feature/AmazingFeature`)
-5. **Abra** um Pull Request
-
-### **Padrões de Código**
-- **Biome**: Linting e formatação automática
-- **TypeScript**: Tipagem estática
-- **Conventional Commits**: Padrão de commits
-- **Husky**: Git hooks (planejado)
 
 ---
 
@@ -550,22 +217,6 @@ pnpm check-types
 
 ---
 
-## 📊 Métricas do Projeto
-
-<div align="center">
-
-| Métrica | Valor |
-|---------|-------|
-| **Linhas de Código** | ~10,000+ |
-| **Componentes UI** | 15+ |
-| **APIs** | Em desenvolvimento |
-| **Testes** | Planejados |
-| **Performance** | 95+ Lighthouse |
-
-</div>
-
----
-
 ## 🏆 Benefícios Esperados
 
 ### **Para Escritórios**
@@ -598,34 +249,15 @@ Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) par
 
 ---
 
-## 🙏 Agradecimentos
+## 👨‍💻 Desenvolvimento
 
-### **Tecnologias**
-- [Turbo](https://turbo.build/) - Build system
-- [pnpm](https://pnpm.io/) - Package manager
-- [ShadcnUI](https://ui.shadcn.com/) - Componentes UI
-- [Radix UI](https://www.radix-ui.com/) - Componentes acessíveis
-- [Tailwind CSS](https://tailwindcss.com/) - CSS framework
-- [TanStack](https://tanstack.com/) - Bibliotecas React
-- [Biome](https://biomejs.dev/) - Linting e formatação
-
-### **Comunidade**
-- [React](https://react.dev/) - Framework UI
-- [Vite](https://vitejs.dev/) - Build tool
-- [TypeScript](https://www.typescriptlang.org/) - Tipagem estática
-- [Lucide](https://lucide.dev/) - Ícones
+Este é um projeto pessoal desenvolvido por um único desenvolvedor. A documentação técnica completa está disponível em [project-structure.md](project-structure.md).
 
 ---
 
 <div align="center">
 
-**⭐ Se este projeto te ajudou, considere dar uma estrela!**
-
-[![GitHub stars](https://img.shields.io/github/stars/seu-usuario/advocasys?style=social)](https://github.com/seu-usuario/advocasys)
-[![GitHub forks](https://img.shields.io/github/forks/seu-usuario/advocasys?style=social)](https://github.com/seu-usuario/advocasys)
-[![GitHub issues](https://img.shields.io/github/issues/seu-usuario/advocasys)](https://github.com/seu-usuario/advocasys/issues)
-
-**Desenvolvido com ❤️ pela equipe Advocasys**
+**Desenvolvido com ❤️ por um desenvolvedor apaixonado**
 
 </div>
 
