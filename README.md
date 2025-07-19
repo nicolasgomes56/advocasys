@@ -6,19 +6,19 @@
   
   <!-- Status e Tecnologias Essenciais -->
   <a href="https://github.com/seu-usuario/advocasys">
-    <img src="https://home.aveek.io/GitHub-Profile-Badges/badge/status/em%20desenvolvimento/blue?logo=github" alt="Status: Em Desenvolvimento"/>
+    <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-blue?style=for-the-badge&logo=github" alt="Status: Em Desenvolvimento"/>
   </a>
   <a href="https://react.dev/">
-    <img src="https://home.aveek.io/GitHub-Profile-Badges/badge/react/18+/blue?logo=react" alt="React 18+"/>
+    <img src="https://img.shields.io/badge/React-18+-blue?style=for-the-badge&logo=react" alt="React 18+"/>
   </a>
   <a href="https://www.typescriptlang.org/">
-    <img src="https://home.aveek.io/GitHub-Profile-Badges/badge/typescript/5+/blue?logo=typescript" alt="TypeScript 5+"/>
+    <img src="https://img.shields.io/badge/TypeScript-5+-blue?style=for-the-badge&logo=typescript" alt="TypeScript 5+"/>
   </a>
   <a href="https://nodejs.org/">
-    <img src="https://home.aveek.io/GitHub-Profile-Badges/badge/node.js/18+/green?logo=node.js" alt="Node.js 18+"/>
+    <img src="https://img.shields.io/badge/Node.js-18+-green?style=for-the-badge&logo=node.js" alt="Node.js 18+"/>
   </a>
   <a href="https://www.postgresql.org/">
-    <img src="https://home.aveek.io/GitHub-Profile-Badges/badge/postgresql/15+/blue?logo=postgresql" alt="PostgreSQL 15+"/>
+    <img src="https://img.shields.io/badge/PostgreSQL-15+-blue?style=for-the-badge&logo=postgresql" alt="PostgreSQL 15+"/>
   </a>
   
 </div>
