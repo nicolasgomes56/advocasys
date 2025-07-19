@@ -6,19 +6,19 @@
   
   <!-- Status e Tecnologias Essenciais -->
   <a href="https://github.com/seu-usuario/advocasys">
-    <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-blue?style=for-the-badge&logo=github" alt="Status: Em Desenvolvimento"/>
+    <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-1f2937?style=flat-square&logo=github&logoColor=ffffff&color=1f2937&labelColor=1f2937" alt="Status: Em Desenvolvimento"/>
   </a>
   <a href="https://react.dev/">
-    <img src="https://img.shields.io/badge/React-18+-blue?style=for-the-badge&logo=react" alt="React 18+"/>
+    <img src="https://img.shields.io/badge/React-61dafb?style=flat-square&logo=react&logoColor=000000&color=61dafb&labelColor=61dafb" alt="React"/>
   </a>
   <a href="https://www.typescriptlang.org/">
-    <img src="https://img.shields.io/badge/TypeScript-5+-blue?style=for-the-badge&logo=typescript" alt="TypeScript 5+"/>
+    <img src="https://img.shields.io/badge/TypeScript-3178c6?style=flat-square&logo=typescript&logoColor=ffffff&color=3178c6&labelColor=3178c6" alt="TypeScript"/>
   </a>
   <a href="https://nodejs.org/">
-    <img src="https://img.shields.io/badge/Node.js-18+-green?style=for-the-badge&logo=node.js" alt="Node.js 18+"/>
+    <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=ffffff&color=339933&labelColor=339933" alt="Node.js"/>
   </a>
   <a href="https://www.postgresql.org/">
-    <img src="https://img.shields.io/badge/PostgreSQL-15+-blue?style=for-the-badge&logo=postgresql" alt="PostgreSQL 15+"/>
+    <img src="https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=ffffff&color=336791&labelColor=336791" alt="PostgreSQL"/>
   </a>
   
 </div>
@@ -165,10 +165,10 @@ pnpm dev
 
 ### **Fase 1: Foundation (Em Andamento)**
 - [x] Setup da estrutura client/server
-- [ ] Configuração do frontend React
-- [ ] Componentes UI com Radix
-- [ ] Configuração de linting com Biome
-- [ ] Setup do backend Fastify
+- [x] Configuração do frontend React
+- [x] Componentes UI com Radix
+- [x] Configuração de linting com Biome
+- [x] Setup do backend Fastify
 - [ ] Configuração do banco PostgreSQL
 
 ### **Fase 2: Core Features (Próximo)**
