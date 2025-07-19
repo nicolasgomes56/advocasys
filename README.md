@@ -1,135 +1,266 @@
-# Turborepo starter
+<!-- <div id="header" align="center">
+  <img src="https://i.imgur.com/8JZqX3L.png" width="800" height="400" alt="Advocasys Banner">
+</div> -->
 
-This Turborepo starter is maintained by the Turborepo core team.
+<div id="badges" align="center">
+  <a href="https://github.com/seu-usuario/advocasys">
+    <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-blue?style=for-the-badge&logo=github" alt="Status"/>
+  </a>
+  <a href="https://nodejs.org/">
+    <img src="https://img.shields.io/badge/Node.js-green?style=for-the-badge&logo=node.js" alt="Node.js"/>
+  </a>
+  <a href="https://react.dev/">
+    <img src="https://img.shields.io/badge/React-blue?style=for-the-badge&logo=react" alt="React"/>
+  </a>
+  <a href="https://www.typescriptlang.org/">
+    <img src="https://img.shields.io/badge/TypeScript-blue?style=for-the-badge&logo=typescript" alt="TypeScript"/>
+  </a>
+  <a href="https://turbo.build/">
+    <img src="https://img.shields.io/badge/Turbo-purple?style=for-the-badge&logo=turbo" alt="Turbo"/>
+  </a>
+  <a href="https://pnpm.io/">
+    <img src="https://img.shields.io/badge/pnpm-orange?style=for-the-badge&logo=pnpm" alt="pnpm"/>
+  </a>
+</div>
 
-## Using this example
+---
 
-Run the following command:
+# 🚀 Advocasys - Plataforma de Gestão Jurídica
 
-```sh
-npx create-turbo@latest
+### [🔗 Demo em Desenvolvimento](#) | [📖 Documentação Técnica](project-structure.md)
+
+> **💡 Para desenvolvedores**: Consulte a [documentação técnica completa](project-structure.md) para detalhes sobre arquitetura, stack tecnológica, configuração e desenvolvimento.
+
+## 📋 Descrição
+
+**Advocasys** é uma solução moderna e completa para gestão de escritórios de advocacia, desenvolvida com tecnologias de ponta. O projeto utiliza princípios de **Domain-Driven Design (DDD)** e **Test-Driven Development (TDD)** para oferecer uma experiência excepcional tanto para advogados quanto para clientes.
+
+**Inicialmente desenvolvido como solução on-premise**, o Advocasys foi arquitetado com flexibilidade para evoluir para um modelo SaaS, permitindo que escritórios de advocacia escolham entre hospedar localmente ou utilizar a versão em nuvem.
+
+### 🎯 Problema que Resolvemos
+
+Escritórios de advocacia enfrentam desafios significativos na gestão administrativa:
+- **Desorganização**: Informações espalhadas em diferentes sistemas
+- **Ineficiência**: Processos manuais que consomem tempo valioso
+- **Falta de Visibilidade**: Dificuldade em acompanhar processos e finanças
+- **Comunicação**: Falta de transparência com clientes
+- **Compliance**: Dificuldade em manter conformidade legal
+
+### 💡 Nossa Solução
+
+Transformamos o Advocasys em uma plataforma moderna que:
+- **Centraliza** todas as informações em um só lugar
+- **Automatiza** processos repetitivos
+- **Fornece** insights em tempo real
+- **Facilita** a comunicação com clientes
+- **Garante** conformidade legal
+
+---
+
+## ✨ Funcionalidades Principais
+
+### 🏢 **Dashboard Inteligente**
+- **KPIs Personalizáveis**: Métricas em tempo real do escritório
+- **Visão Centralizada**: Processos ativos, contratos, receitas/despesas
+- **Tarefas Pendentes**: Acompanhamento de atividades
+- **Gráficos Interativos**: Visualização de dados com Recharts
+
+### 👥 **Gestão de Pessoas**
+- **Cadastro Completo**: Clientes, advogados, usuários internos e fornecedores
+- **Controle de Permissões**: Sistema granular de grupos de acesso
+- **Histórico Detalhado**: Timeline de interações e documentos
+- **Segmentação**: Tags, categorias e status de relacionamento
+
+### 💰 **Sistema Financeiro**
+- **Controle de Recebimentos**: Gestão de contas a receber
+- **Gestão de Despesas**: Controle de contas a pagar
+- **Relatórios Financeiros**: Balanços e DRE
+- **Gestão de Caixas**: Controle de entradas e saídas
+- **Formas de Pagamento**: Configuração flexível
+
+### ⚖️ **Gestão de Processos Jurídicos**
+- **Cadastro de Processos**: Criação e administração completa
+- **Acompanhamento**: Histórico de movimentações e status
+- **Upload de Documentos**: Armazenamento seguro
+- **Audiências**: Controle de audiências programadas
+- **Alertas e Notificações**: Lembretes de prazos
+
+### 📋 **Gestão de Contratos**
+- **Criação Inteligente**: Templates personalizáveis
+- **Administração**: Controle de valores e parcelas
+- **Modelos de Contratos**: Configuração de templates
+- **Histórico**: Acompanhamento de alterações
+
+### 📱 **Tarefas e Agenda**
+- **Planejamento**: Gerenciamento de tarefas e compromissos
+- **Notificações**: Lembretes de prazos e audiências
+- **Agenda Integrada**: Sincronização com calendários
+- **Status Tracking**: Acompanhamento de progresso
+
+### 📢 **Sistema de Notificações**
+- **Notificações Internas**: Alertas para advogados e equipe
+- **Notificações para Clientes**: Comunicação automática de status
+- **Integração WhatsApp**: API oficial para mensagens
+- **Integração Telegram**: Bot para notificações
+- **Email Automático**: Notificações por email
+- **SMS**: Notificações por mensagem de texto
+
+---
+
+## 🚀 Quick Start
+
+### **Pré-requisitos**
+- Node.js
+- pnpm
+- Git
+
+### **1. Clone o Repositório**
+```bash
+git clone https://github.com/seu-usuario/advocasys.git
+cd advocasys
 ```
 
-## What's inside?
+### **2. Instale as Dependências**
+```bash
+# Instale o pnpm globalmente (se necessário)
+npm install -g pnpm
 
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build
-yarn dlx turbo build
-pnpm exec turbo build
+# Instale as dependências do monorepo
+pnpm install
 ```
 
-You can build a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
+### **3. Configure o Ambiente**
+```bash
+# Copie os arquivos de exemplo
+cp apps/web/.env.example apps/web/.env
+cp apps/api/.env.example apps/api/.env
 
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build --filter=docs
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build --filter=docs
-yarn exec turbo build --filter=docs
-pnpm exec turbo build --filter=docs
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev
-yarn exec turbo dev
-pnpm exec turbo dev
+# Edite as variáveis de ambiente
+nano apps/web/.env
+nano apps/api/.env
 ```
 
-You can develop a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
+### **4. Inicie o Desenvolvimento**
+```bash
+# Inicia todos os serviços em modo desenvolvimento
+pnpm dev
 
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev --filter=web
+# Ou inicie apenas o frontend
+pnpm --filter web dev
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev --filter=web
-yarn exec turbo dev --filter=web
-pnpm exec turbo dev --filter=web
-```
-
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo login
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo login
-yarn exec turbo login
-pnpm exec turbo login
+# Ou inicie apenas o backend
+pnpm --filter api dev
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+### **5. Acesse a Aplicação**
+- **Frontend**: http://localhost:3000
+- **Backend API**: http://localhost:3001
+- **Storybook**: http://localhost:6006 (quando configurado)
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+---
 
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo link
+## 📋 Roadmap
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo link
-yarn exec turbo link
-pnpm exec turbo link
-```
+### **Fase 1: Foundation (Em Andamento)**
+- [ ] Setup do monorepo com Turbo
+- [ ] Configuração do frontend React
+- [ ] Componentes UI com Radix
+- [ ] Configuração de linting com Biome
+- [ ] Setup do backend Fastify
+- [ ] Configuração do banco PostgreSQL
 
-## Useful Links
+### **Fase 2: Core Features (Próximo)**
+- [ ] Sistema de autenticação
+- [ ] CRUD básico de usuários e clientes
+- [ ] Dashboard inicial
+- [ ] Gestão de processos
+- [ ] Upload de arquivos
 
-Learn more about the power of Turborepo:
+### **Fase 3: Advanced Features**
+- [ ] Sistema financeiro
+- [ ] Gestão de contratos
+- [ ] Sistema de notificações internas
+- [ ] Integrações de comunicação (WhatsApp, Telegram)
+- [ ] Relatórios avançados
+- [ ] PWA
 
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+### **Fase 4: Polish & Launch**
+- [ ] Testes completos
+- [ ] Performance optimization
+- [ ] Documentação
+- [ ] Deploy on-premise
+- [ ] Preparação para SaaS
+
+---
+
+## 🎯 Próximas Funcionalidades
+
+### **Em Desenvolvimento**
+- [ ] **Backend API**: Implementação com Fastify
+- [ ] **Autenticação**: Sistema JWT completo
+- [ ] **Banco de Dados**: Modelagem com Prisma
+- [ ] **Testes**: Cobertura completa
+- [ ] **ShadcnUI**: Setup e configuração
+- [ ] **TanStack**: Implementação das bibliotecas
+- [ ] **Sistema de Logging**: Configuração do Pino
+- [ ] **Notificações Básicas**: Sistema interno de alertas
+
+### **Planejadas**
+- [ ] **IA para Análise**: Análise de documentos
+- [ ] **Integração WhatsApp**: API oficial para notificações
+- [ ] **Integração Telegram**: Bot para notificações automáticas
+- [ ] **Sistema de SMS**: Notificações por mensagem de texto
+- [ ] **Email Marketing**: Campanhas automáticas
+- [ ] **App Mobile**: React Native
+- [ ] **Multi-tenant**: Múltiplos escritórios (SaaS)
+- [ ] **Arquitetura SaaS**: Preparação para modelo de assinatura
+
+---
+
+## 🏆 Benefícios Esperados
+
+### **Para Escritórios**
+- **40-60%** redução no tempo administrativo
+- **100%** centralização de informações
+- **Compliance** automatizado
+- **Escalabilidade** para crescimento
+- **Flexibilidade** de deploy (on-premise ou SaaS)
+- **Controle total** dos dados (versão on-premise)
+
+### **Para Advogados**
+- **Foco** no trabalho jurídico
+- **Visão clara** dos processos
+- **Colaboração** facilitada
+- **Mobilidade** total
+
+### **Para Clientes**
+- **Transparência** em tempo real
+- **Comunicação** multi-canal (WhatsApp, Telegram, Email, SMS)
+- **Agilidade** nas respostas
+- **Segurança** dos dados
+- **Notificações automáticas** de status de processos
+- **Acesso facilitado** às informações
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+## 👨‍💻 Desenvolvimento
+
+Este é um projeto pessoal desenvolvido por um único desenvolvedor. A documentação técnica completa está disponível em [project-structure.md](project-structure.md).
+
+---
+
+<div align="center">
+
+**Desenvolvido com ❤️ por um desenvolvedor apaixonado**
+
+</div>
+
+---
+
+*Última atualização: Janeiro 2025*
